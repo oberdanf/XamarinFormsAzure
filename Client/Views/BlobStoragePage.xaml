@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsAzure.BlobStoragePage"
+	Title="Blob Storage">
+    <StackLayout Margin="10,0,10,0" Spacing="10">
+		<Label Text="{Binding Feedback}" TextColor="{Binding FeedbackColor}" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Tirar Foto" Command="{Binding TakePictureCommand}" />
+            <Button Text="Escolher Foto" Command="{Binding PickPictureCommand}" />
+        </StackLayout>
+		<Image Source="{Binding ImageSource}" />
+	</StackLayout>
+</ContentPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsAzure.HomePage"
+	Title="Hello TDC">
+	<StackLayout Margin="10,0,10,0">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="Login" Command="{Binding LoginCommand}" />
+            <Button Text="Logout" IsEnabled="{Binding IsAuthenticated}" Command="{Binding LogoutCommand}" />
+        </StackLayout>
+        <ScrollView>
+            <Label Text="{Binding AuthInformation}" HorizontalOptions="Center" />
+        </ScrollView>
+        <Button Text="Storage Queue" IsEnabled="{Binding IsAuthenticated}" Command="{Binding OpenStorageQueuePageCommand}" />
+        <Button Text="Storage Blob" IsEnabled="{Binding IsAuthenticated}" Command="{Binding OpenStorageBlobPageCommand}" />
+        <Button Text="SignalR" IsEnabled="{Binding IsAuthenticated}" Command="{Binding OpenSignalRPageCommand}" />
+	</StackLayout>
+</ContentPage>

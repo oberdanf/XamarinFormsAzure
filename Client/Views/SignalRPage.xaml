@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsAzure.SignalRPage"
+	Title="SignalR">
+    <StackLayout Margin="10,0,10,0">
+        <Label TextColor="Green" Text="{Binding Feedback}" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Iniciar Serviço" Command="{Binding StartServiceCommand}" />
+            <Button Text="Parar Serviço" Command="{Binding StopServiceCommand}" />
+        </StackLayout>
+		<Grid>
+            <Grid.ColumnDefinitions>
+               <ColumnDefinition Width="*" />
+			   <ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+            <Entry Text="{Binding Message}" />
+            <Button Grid.Column="1" Text="Enviar" Command="{Binding SendInfoCommand}" />
+        </Grid>
+        <ScrollView>
+          <Label TextColor="Gray" Text="{Binding InfoText}" />
+        </ScrollView>
+	</StackLayout>
+</ContentPage>

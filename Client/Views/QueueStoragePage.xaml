@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsAzure.QueueStoragePage"
+	Title="Queue Storage">
+    <StackLayout Margin="10,0,10,0" Spacing="10">
+		<Label Text="{Binding Feedback}" TextColor="{Binding FeedbackColor}" />
+		<Entry Text="{Binding Message}" Placeholder="Escreva sua mensagem" />
+		<Button Text="Enviar Mensagem" Command="{Binding SendMessageCommand}" />
+		<Label Text="Listar Mensagens da Queue" />
+        <Button Text="Ler mensagens (apagará mensagens lidas)" Command="{Binding ReadMessagesCommand}" />
+		<ListView ItemsSource="{Binding Messages}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding .}"/>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+		<ActivityIndicator BackgroundColor="Black" Opacity="0.5" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+	</StackLayout>
+</ContentPage>

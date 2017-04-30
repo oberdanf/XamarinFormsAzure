@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "607359354551",
+    "firebase_url": "https://tdc2017-fd5c6.firebaseio.com",
+    "project_id": "tdc2017-fd5c6",
+    "storage_bucket": "tdc2017-fd5c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607359354551:android:94ceb7cf4f201375",
+        "android_client_info": {
+          "package_name": "com.arctouch.xamarinformsazure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607359354551-s12l13eno8uoprt5jcd63eu4k5bsil1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7xZERHFxalGjJx1ks9ZC4iWDVW_nkE0c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
